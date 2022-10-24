@@ -2,7 +2,7 @@
 package CPU;
 public class Registers {
 
-    String R0 = "00000000000000004975982375989";
+    String R0 = "0000000000000000";
     String R1 = "0000000000000000";
     String R2 = "0000000000000000";
     String R3 = "0000000000000000";
@@ -12,7 +12,7 @@ public class Registers {
     String CC = "0000";
 
     String MBR = "0000000000000000";
-    String MAB = "0000000000000000";
+    String MAR = "0000000000000000";
 
     String PC = "0000000000000000";
 
@@ -31,7 +31,7 @@ public class Registers {
         CC = "0000";
 
         MBR = "0000000000000000";
-        MAB = "0000000000000000";
+        MAR = "0000000000000000";
 
         PC = "0000000000000000";
 
@@ -73,9 +73,9 @@ public class Registers {
             MBR = String.format("%16s", Integer.toBinaryString(val)).replace(' ', '0');
         }
 
-        if (reg_name.equals("MAB"))
+        if (reg_name.equals("MAR"))
         {
-            MAB = String.format("%16s", Integer.toBinaryString(val)).replace(' ', '0');
+            MAR = String.format("%16s", Integer.toBinaryString(val)).replace(' ', '0');
         }
 
         if (reg_name.equals("PC"))
@@ -114,7 +114,7 @@ public class Registers {
             case "R3" -> R3;
             case "idx" -> idx;
             case "MBR" -> MBR;
-            case "MAB" -> MAB;
+            case "MAB" -> MAR;
             case "PC" -> PC;
             case "X1" -> X1;
             case "X2" -> X2;
@@ -134,7 +134,7 @@ public class Registers {
             case "R3" -> Integer.parseInt(R3, 2);
             case "idx" -> Integer.parseInt(idx, 2);
             case "MBR" -> Integer.parseInt(MBR, 2);
-            case "MAB" -> Integer.parseInt(MAB, 2);
+            case "MAB" -> Integer.parseInt(MAR, 2);
             case "PC" -> Integer.parseInt(PC, 2);
             case "X1" -> Integer.parseInt(X1, 2);
             case "X2" -> Integer.parseInt(X2, 2);
